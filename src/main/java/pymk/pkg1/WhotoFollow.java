@@ -43,21 +43,18 @@ public class WhotoFollow {
             // 'friend1' will be used in the emitted pair
             IntWritable follower1 = new IntWritable();
             while (st.hasMoreTokens()) {
-               // Integer friend = Integer.parseInt(st.nextToken());
-                //friend1.set(-user);
+               
                 IntWritable followee = new IntWritable(Integer.parseInt(st.nextToken()));
                 context.write(followee,user); 
                 log.info("the values in postive frinds new are " + followee +","+ user);
-                //friend1.set(-friend.get());
+                
                 log.info("the values in friend new are " + follower1.toString());
                context.write(follower1,user); ////replaced user to friend2
                //log.info("the value of friend is" + friend
                 
                log.info("the values in context friend1 " + follower1 +","+ user);
                
-               //log.info(" the pair is " ,context.write(friend, friend1));
-               // context.write(friend1, user);
-              
+               
                friends.add(followee.get());
                 // save the friends of user 'user' for later
             }
@@ -80,7 +77,7 @@ public class WhotoFollow {
                     log.info("the values in context seenfriend1 " + follower1 +","+ follower2);
                     
                     context.write(follower2, follower1);
-                    log.info("the values in context seenfriend2 " + follower1 +","+ follower2);
+                    log.info("the values in context seenfriend2 " + follower2 +","+ follower1);
                 }
                 followedBy.add(follower1.get());
                 log.info("the values in seen seenFriends now are " + followedBy.toString());
