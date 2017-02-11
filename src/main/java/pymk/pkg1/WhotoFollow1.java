@@ -42,7 +42,9 @@ public class WhotoFollow1 {
 			Job job2 = Job.getInstance(conf1, "JOB_2");
 			job2.setMapperClass(Mapper2.class);
 			job2.setReducerClass(Reducer2.class);
-			job2.setInputFormatClass(KeyValueTextInputFormat.class);
+		//	job2.setInputFormatClass(KeyValueTextInputFormat.class);
+			job2.setOutputKeyClass(IntWritable.class);
+			job2.setOutputValueClass(IntWritable.class);
 			FileInputFormat.addInputPath(job2, new Path(args[1]));
 			if(fs.exists(new Path(args[2]))){
 				/*If exist delete the output path*/
