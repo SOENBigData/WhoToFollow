@@ -1,4 +1,4 @@
-package pymk.pkg1;
+package WhoToFollow.pkg;
 
 import java.util.ArrayList;
 
