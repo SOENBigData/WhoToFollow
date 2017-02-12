@@ -1,4 +1,4 @@
-package pymk.pkg1;
+package WhoToFollow.pkg;
 
 import java.io.IOException;
 
@@ -11,10 +11,10 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.KeyValueTextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class WhotoFollow1 {
+public class WhotoFollow {
 	public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
 		try {
-			executeMapReduce(args, AllPairsMapper.class, PairsReducer.class);
+			executeMapReduce(args, InvertMapper.class, InvertReducer.class);
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
@@ -25,7 +25,7 @@ public class WhotoFollow1 {
 			throws IOException, InterruptedException, ClassNotFoundException {
 		Configuration conf1 = new Configuration();
 		Job job1 = new Job(conf1, "Who To Follow");
-		job1.setJarByClass(WhotoFollow1.class);
+		job1.setJarByClass(WhotoFollow.class);
 		job1.setMapperClass(mapperClass);
 		job1.setReducerClass(reducerClass);
 		job1.setOutputKeyClass(IntWritable.class);
@@ -40,8 +40,9 @@ public class WhotoFollow1 {
 		FileOutputFormat.setOutputPath(job1, new Path(args[1]));
 		if(job1.waitForCompletion(true)){
 			Job job2 = Job.getInstance(conf1, "JOB_2");
-			job2.setMapperClass(Mapper2.class);
-			job2.setReducerClass(Reducer2.class);
+			job2.setMapperClass(FilterMapper.class);
+			job2.setReducerClass(FilterReducer.class);
+			//job2.setReducerClass(reducerClass);
 		//	job2.setInputFormatClass(KeyValueTextInputFormat.class);
 			job2.setOutputKeyClass(IntWritable.class);
 			job2.setOutputValueClass(IntWritable.class);
