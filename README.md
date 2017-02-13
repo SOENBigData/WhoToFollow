@@ -7,11 +7,17 @@ Who To Follow
 =================================
 
 I.  About
-I.   Requirements
+
+II.   Requirements
+
 III. Running Who To Follow
+
 IV.   Help & Feedback
 
-I About:
+
+
+I.    About:
+==============================
 
 Who To Follow is an algorithm that recommends a User X a list of people to follow Fi based on the number of followers X and Fi have in common.
 This algorithm is implemented using two map-reduce jobs.
