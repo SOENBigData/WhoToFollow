@@ -17,8 +17,7 @@ public class FilterMapper extends Mapper<Object,Text,IntWritable,IntWritable>{
         IntWritable user = new IntWritable(Integer.parseInt(st.nextToken()));
         // 'followersID' will store the list of followers of user 'user'
         ArrayList<Integer> followersID = new ArrayList<>();
-        // First, go through the list of all followers of user 'user' and emit 
-        // (user,followee)
+        // First, go through the list of all followers of user 'user' and emit (user,followee)
         // 'followee' will be used in the emitted pair
         IntWritable follower1 = new IntWritable();
         while (st.hasMoreTokens()) {
