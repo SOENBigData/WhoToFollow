@@ -12,7 +12,11 @@ II.   Requirements
 
 III. Running Who To Follow
 
-IV.   Help & Feedback
+IV . Source Files
+
+V. Results
+
+VI.   Help & Feedback
 
 
 
@@ -48,7 +52,27 @@ To run the Who to Follow Project,follow the following steps:
 Download the jar file from the repository https://github.com/SOENBigData/WhoToFollow/
 Import the jar file in eclipse using the Import -> Archive file -> your jar file
 
-IV.   Help & Feedback
+IV. Source Files:
+===================================
+
+WhoToFollow/src/main/java/WhoToFollow/pkg/FilterMapper.java
+WhoToFollow/src/main/java/WhoToFollow/pkg/FilterReducer.java
+WhoToFollow/src/main/java/WhoToFollow/pkg/InvertMapper.java
+WhoToFollow/src/main/java/WhoToFollow/pkg/InvertReducer.java
+WhoToFollow/src/main/java/WhoToFollow/pkg/WhoToFollow.java
+
+V. Results :
+=====================================
+
+Output1 : Contains the output from IncertMapper and InvertReducer
+Output2: Contains final output in the following format
+
+X R1(n1) R2(n2) R3(n3) ...
+where Ri are the ids of the people recommended to user X and ni is the number of followed
+people in common between X and Ri.
+
+
+VI.   Help & Feedback
 =================================
 Help
 ----
