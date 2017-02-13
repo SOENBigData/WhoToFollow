@@ -40,9 +40,9 @@ III. Running Who To Follow
 =================================
 Using command line :
 
-Download the whotofollow.jar from the repository https://github.com/SOENBigData/WhoToFollow/whotofollow.jar
+Download the whotofollow.jar from the repository https://github.com/SOENBigData/WhoToFollow/WhoToFollow.jar
 Once you have the jar,follow the following steps:
-Navigate to the directory where your downloaded whotofollow.jar is downloaded.
+Navigate to the directory where your downloaded WhoToFollow.jar is downloaded.
 Create an input file in the same directory for the jar 
 Execute the command java -jar whotofollow.jar inputFile.txt output1 output2
 
