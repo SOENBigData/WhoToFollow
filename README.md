@@ -35,6 +35,7 @@ The program is implemented using the MapReduce algorithm
 III. Running Who To Follow
 =================================
 Using command line :
+
 Download the whotofollow.jar from the repository https://github.com/SOENBigData/WhoToFollow/whotofollow.jar
 Once you have the jar,follow the following steps:
 Navigate to the directory where your downloaded whotofollow.jar is downloaded.
@@ -42,7 +43,7 @@ Create an input file in the same directory for the jar
 Execute the command java -jar whotofollow.jar inputFile.txt output1 output2
 
 Using Eclipse:
-====================================
+
 To run the Who to Follow Project,follow the following steps:
 Download the jar file from the repository https://github.com/SOENBigData/WhoToFollow/
 Import the jar file in eclipse using the Import -> Archive file -> your jar file
